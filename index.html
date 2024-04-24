@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat App</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 10px;
+          background-color: #f4f4f4;
+      }
+      #messages {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+      }
+      #messages li {
+          padding: 8px 16px;
+          border-bottom: 1px solid #ddd;
+      }
+      #messages li:nth-child(odd) {
+          background: #eee;
+      }
+      #inputSection {
+          background: #fff;
+          padding: 10px;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+      }
+      #messageInput {
+          padding: 10px;
+          width: 75%;
+          margin-right: 5px;
+      }
+      #sendBtn {
+          width: 20%;
+      }
+  </style>
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Generate a unique identifier for the user
+      const userId = localStorage.getItem('userId') || `User_${Math.floor(Math.random() * 1000000)}`;
+      localStorage.setItem('userId', userId);
+
+      const socket = io('http://localhost:8000');
+
+      socket.on('connected', function (msg) {
+        console.log(msg);
+        displayMessage('System', `You are connected as ${userId}`);
+      });
+
+      socket.on('message', function (data) {
+        console.log('New message:', data);
+        displayMessage(data.sender, data.message);
+      });
+
+      document.getElementById('sendBtn').addEventListener('click', function () {
+        const message = document.getElementById('messageInput').value;
+        if(message.trim().length > 0) {
+          socket.emit('message', { sender: userId, message: message });
+          document.getElementById('messageInput').value = ''; // Clear input after sending
+        }
+      });
+
+      function displayMessage(sender, message) {
+        const messageList = document.getElementById('messages');
+        const msg = document.createElement('li');
+        msg.textContent = `${sender}: ${message}`;
+        messageList.appendChild(msg);
+        messageList.scrollTop = messageList.scrollHeight; // Scroll to the latest message
+      }
+    });
+  </script>
+</head>
+<body>
+<ul id="messages"></ul>
+<div id="inputSection">
+  <input type="text" id="messageInput" placeholder="Type a message..." autofocus>
+  <button id="sendBtn">Send</button>
+</div>
+</body>
+</html>
