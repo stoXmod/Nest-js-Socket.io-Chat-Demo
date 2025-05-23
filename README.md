@@ -1,73 +1,116 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+NEST-JS-SOCKET.IO-CHAT-DEMO
+===========================
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+_Connect, Communicate, and Collaborate in Real-Time_
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+![last-commit](https://img.shields.io/github/last-commit/stoXmod/Nest-js-Socket.io-Chat-Demo?style=flat&logo=git&logoColor=white&color=0080ff) ![repo-top-language](https://img.shields.io/github/languages/top/stoXmod/Nest-js-Socket.io-Chat-Demo?style=flat&color=0080ff) ![repo-language-count](https://img.shields.io/github/languages/count/stoXmod/Nest-js-Socket.io-Chat-Demo?style=flat&color=0080ff)
 
-## Description
+_Built with the tools and technologies:_
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+![JSON](https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white) ![Socket.io](https://img.shields.io/badge/Socket.io-010101.svg?style=flat&logo=socketdotio&logoColor=white) ![npm](https://img.shields.io/badge/npm-CB3837.svg?style=flat&logo=npm&logoColor=white) ![Prettier](https://img.shields.io/badge/Prettier-F7B93E.svg?style=flat&logo=Prettier&logoColor=black) ![Yarn](https://img.shields.io/badge/Yarn-2C8EBB.svg?style=flat&logo=Yarn&logoColor=white)  
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat&logo=TypeScript&logoColor=white) ![tsnode](https://img.shields.io/badge/tsnode-3178C6.svg?style=flat&logo=ts-node&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B32C3.svg?style=flat&logo=ESLint&logoColor=white) ![Socket](https://img.shields.io/badge/Socket-C93CD7.svg?style=flat&logo=Socket&logoColor=white) ![Jest](https://img.shields.io/badge/Jest-C21325.svg?style=flat&logo=Jest&logoColor=white)
 
-## Installation
+  
 
-```bash
-$ yarn install
-```
+* * *
 
-## Running the app
+Table of Contents
+-----------------
 
-```bash
-# development
-$ yarn run start
+*   [Overview](#overview)
+*   [Getting Started](#getting-started)
+    *   [Prerequisites](#prerequisites)
+    *   [Installation](#installation)
+    *   [Usage](#usage)
+    *   [Testing](#testing)
 
-# watch mode
-$ yarn run start:dev
+* * *
 
-# production mode
-$ yarn run start:prod
-```
+Overview
+--------
 
-## Test
+Nest-js-Socket.io-Chat-Demo is a powerful demonstration of real-time chat capabilities built with NestJS and Socket.IO, designed to streamline the development of interactive messaging applications.
 
-```bash
-# unit tests
-$ yarn run test
+**Why Nest-js-Socket.io-Chat-Demo?**
 
-# e2e tests
-$ yarn run test:e2e
+This project showcases the seamless integration of real-time communication and modular architecture. The core features include:
 
-# test coverage
-$ yarn run test:cov
-```
+*   **⚡️ Real-time Communication:** Instant messaging through WebSocket, ensuring low-latency interactions.
+*   **🛠️ Modular Architecture:** Built with NestJS for scalability and maintainability, perfect for evolving applications.
+*   **🔒 TypeScript Support:** Enhances developer experience with type safety, reducing runtime errors.
+*   **✅ End-to-End Testing:** Integrated testing framework to ensure reliability and catch issues early.
+*   **💬 User-Friendly Interface:** Simple HTML structure for seamless user interaction, boosting engagement.
+*   **🌐 CORS Configuration:** Flexible client-server communication, essential for modern web applications.
 
-## Support
+* * *
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Getting Started
+---------------
 
-## Stay in touch
+### Prerequisites
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+This project requires the following dependencies:
 
-## License
+*   **Programming Language:** TypeScript
+*   **Package Manager:** Yarn, Npm
 
-Nest is [MIT licensed](LICENSE).
+### Installation
+
+Build Nest-js-Socket.io-Chat-Demo from the source and intsall dependencies:
+
+1.  **Clone the repository:**
+    
+        ❯ git clone https://github.com/stoXmod/Nest-js-Socket.io-Chat-Demo
+        
+    
+2.  **Navigate to the project directory:**
+    
+        ❯ cd Nest-js-Socket.io-Chat-Demo
+        
+    
+3.  **Install the dependencies:**
+    
+
+**Using [yarn](https://yarnpkg.com/):**
+
+    ❯ yarn install
+    
+
+**Using [npm](https://www.npmjs.com/):**
+
+    ❯ npm install
+    
+
+### Usage
+
+Run the project with:
+
+**Using [yarn](https://yarnpkg.com/):**
+
+    yarn start
+    
+
+**Using [npm](https://www.npmjs.com/):**
+
+    npm start
+    
+
+### Testing
+
+Nest-js-socket.io-chat-demo uses the {**test\_framework**} test framework. Run the test suite with:
+
+**Using [yarn](https://yarnpkg.com/):**
+
+    yarn test
+    
+
+**Using [npm](https://www.npmjs.com/):**
+
+    npm test
+    
+
+* * *
+
+[⬆ Return](#top)
+
+* * *
